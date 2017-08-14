@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	  <meta charset="utf-8"/>
+	  <title>PreLoadMe</title>
+
+	 <!-- jQuery Plugin -->
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	  <!-- Stylesheet -->
+	  <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen, print"/>
+	<style>
+		#landing-page-error {
+ width: 100%;
+ position: absolute;
+ top: 0; /* this and the position: absolute has the error message pop up right below the header nav bar in landing page */
+ height: 10%;
+}
+.jumbotron p.error-message {
+        font-size: 14px;
+}
+	</style>
+	  
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+
+<!-- Your Website Content -->
+<div>This is your website content</div>
+	<div class="jumbtron">
+		
+		
+	<button id="content">help</button>
+		<button id="desk"> thank you/</button>
+	</div>
+<div class='alert alert-danger alert-dismissible' role='alert' id= "landing-page-error">
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+          <span class='glyphicon glyphicon-warning-sign' aria-hidden='true'>  </span>
+<p class = "error-message"> Sign-Up Error </p>
+
+<!-- Preloader -->
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).on('load', function() { // makes sure the whole site is loaded 
+			$('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+		$(.jumbtron).ready(function{
+						 $("#content").show(function){
+			           content:document.write('hi');
+			
+		}
+	               $('#desk').hide(function){
+					
+	   }
+						 
+	 });
+</script> 
+
+</body>
+</html>
